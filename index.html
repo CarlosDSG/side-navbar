@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+    <title>Frontend Mentor | Intro section with dropdown navigation</title>
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+    <header class="flex center">
+        <div class="logo-cont">
+            <img src="images/logo.svg" alt="snap-logo" />
+        </div>
+        <div id="mySidenav" class="sidenav">
+            <ul>
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                <li class="submenu-cont">
+                    <a href="#">Features<i class="icon fa-solid fa-angle-up"></i></a>
+                    <ul class="submenu">
+                        <li>
+                            <a href="#"><img class="submenu-icon" src="images/icon-todo.svg" alt="icon todo list" /> Todo List
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"><img class="submenu-icon" src="images/icon-calendar.svg" alt="icon calendar" /> Calendar
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"><img class="submenu-icon" src="images/icon-reminders.svg" alt="icon reminder" /> Reminders
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"><img class="submenu-icon" src="images/icon-planning.svg" alt="icon planning" /> Planing
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="submenu-cont">
+                    <a href="#">Company<i class="icon fa-solid fa-angle-up"></i></a>
+                    <ul class="submenu">
+                        <li><a href="#">History</a></li>
+                        <li><a href="#">Our Team</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">About </a></li>
+            </ul>
+            <div class="sing-up">
+                <a class="sing-up__link" href="#">Loging</a>
+                <a class="sing-up__link border" href="#">Register</a>
+            </div>
+        </div>
+
+        <div id="main">
+            <span style="font-size: 30px; cursor: pointer" onclick="openNav()">☰ </span>
+        </div>
+    </header>
+
+    <main id="main-section">
+        <figure>
+            <img src="images/image-hero-mobile.png" alt="image hero" />
+        </figure>
+        <div class="container">
+            <article class="main-section__article">
+                <h1>Make remote work</h1>
+                <p>
+                    Get your team sync, no matter your location. Streamline processes, create team rituals, and watch productivity soar
+                </p>
+                <div class="btn-link">
+                    <a href="#">Learn more</a>
+                </div>
+
+                <div class="container-grid">
+                    <figure class="main-section_img-conteainer">
+                        <img src="images/client-databiz.svg" alt="img1" />
+                    </figure>
+                    <figure class="main-section_img-conteainer">
+                        <img src="images/client-audiophile.svg" alt="img1" />
+                    </figure>
+                    <figure class="main-section_img-conteainer">
+                        <img src="images/client-meet.svg" alt="img1" />
+                    </figure>
+                    <figure class="main-section_img-conteainer">
+                        <img src="images/client-maker.svg" alt="img1" />
+                    </figure>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <!--       Login Register Make remote work Get your team in sync, no matter your location. Streamline processes, create team rituals, and watch productivity soar. Learn more
+ -->
+    <script src="js/main.js"></script>
+    <script src="https://kit.fontawesome.com/70125d86e0.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
