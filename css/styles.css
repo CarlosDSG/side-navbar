@@ -67,7 +67,7 @@ header {
     padding: 8px 32px 8px 32px;
     position: relative;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 1.0625rem;
     color: #818181;
     display: block;
     transition: 0.3s;
@@ -88,7 +88,7 @@ header {
 
 .icon {
     position: absolute;
-    right: 6rem;
+    right: 5.8rem;
     transition: 0.5s;
 }
 
@@ -98,11 +98,11 @@ header {
 
 .sing-up {
     margin-top: 1.5rem;
+    font-size: 1.2rem;
 }
 
 .sidenav .sing-up__link {
     text-align: center;
-    font-size: 0.9375rem;
 }
 
 
@@ -195,6 +195,7 @@ figure>img {
     background-color: #000;
     color: #fff;
     font-weight: 500;
+    transition: 0.3s ease;
 }
 
 .btn:active {
