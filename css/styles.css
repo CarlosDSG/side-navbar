@@ -21,7 +21,11 @@ html {
 
 body {
     font-family: 'Epilogue', sans-serif;
+    position: relative;
 }
+
+
+/* -------------------------------------header section--------------------------------------------- */
 
 header {
     min-height: 50px;
@@ -56,6 +60,7 @@ header {
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
+    z-index: 500;
 }
 
 .sidenav a {
@@ -78,6 +83,7 @@ header {
 
 #main {
     transition: margin-right 0.5s;
+    z-index: 500;
 }
 
 .icon {
@@ -99,6 +105,27 @@ header {
     font-size: 0.9375rem;
 }
 
+
+/* El overlay hara que se oscuresca el fondo cuando el sidenav este desplegado */
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.75);
+    min-height: 100%;
+    opacity: 0;
+    z-index: -1;
+    position: absolute;
+    transition: opacity 250ms ease;
+    width: 100%;
+}
+
+.overlay.visible {
+    opacity: 1;
+    z-index: 200;
+}
+
+
+/* ------------------------------------------------------------------------------------- */
+
 .border {
     border: 1px solid var(--Almost-Black);
     border-radius: 8px;
@@ -106,7 +133,7 @@ header {
 }
 
 .border:hover,
-.border:focus {
+.border:active {
     color: var(--Almost-White);
     background-color: var(--Almost-Black);
 }
@@ -131,13 +158,22 @@ li.submenu-cont:focus-within .submenu {
     margin-right: 7px;
 }
 
-figure img {
+
+/* ------------------------------------header section end------------------------------------------ */
+
+picture>img,
+figure>img {
     width: 100%;
     object-fit: cover;
 }
 
+#main-section {
+    z-index: 700;
+}
+
 .main-section__article {
     margin-top: 2.5rem;
+    padding-bottom: 4rem;
     text-align: center;
 }
 
@@ -147,28 +183,34 @@ figure img {
     color: var(--Medium-Gray);
 }
 
-.btn-link {
+.btn-link-cont {
     margin: 1.5rem 0;
 }
 
-.btn-link a {
+.btn-link-cont a {
     display: inline-block;
     padding: 0.8rem 1.2rem;
+    border: 2px solid transparent;
     border-radius: 12px;
     background-color: #000;
     color: #fff;
     font-weight: 500;
 }
 
+.btn:active {
+    border-color: #000;
+    background-color: transparent;
+    color: #000;
+}
+
 .container-grid {
     display: grid;
-    grid-template-columns: repeat(4, 70px);
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(70px, 70px));
     grid-template-rows: auto;
-    gap: 25px;
-    margin: auto;
+    gap: 20px;
+    margin: 0 auto;
     margin-top: 2rem;
-    margin-bottom: 4rem;
-    width: max-content;
 }
 
 
@@ -187,3 +229,8 @@ figure img {
     max-width: 1080px;
     margin-inline: auto;
 }
+
+
+/* ------------------------------------------- */
+
+@media screen and (min-width: 500px) {}

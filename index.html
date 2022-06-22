@@ -11,6 +11,7 @@
 </head>
 
 <body>
+    <div class="overlay"></div>
     <header class="flex center">
         <div class="logo-cont">
             <img src="images/logo.svg" alt="snap-logo" />
@@ -62,17 +63,20 @@
     </header>
 
     <main id="main-section">
-        <figure>
-            <img src="images/image-hero-mobile.png" alt="image hero" />
-        </figure>
+        <picture>
+            <source media="(max-width:799px )" srcset="images/image-hero-mobile.png" />
+            <source media="(min-width:800px )" srcset="images/image-hero-desktop.png" />
+            <img alt="glass-image" />
+        </picture>
+
         <div class="container">
             <article class="main-section__article">
                 <h1>Make remote work</h1>
                 <p>
                     Get your team sync, no matter your location. Streamline processes, create team rituals, and watch productivity soar
                 </p>
-                <div class="btn-link">
-                    <a href="#">Learn more</a>
+                <div class="btn-link-cont">
+                    <a class="btn" href="#main-section">Learn more</a>
                 </div>
 
                 <div class="container-grid">
